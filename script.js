@@ -11,7 +11,7 @@ document
       .then(function (json) {
         console.log(json);
         let results = "";
-        results += json.text;
+        results += "<strong>" + '"' + json.text + '"' + "</strong>";
         console.log(results);
         document.getElementById("random-fax").innerHTML = results;
       });
@@ -30,7 +30,7 @@ document
       .then(function (json) {
         console.log(json);
         let results = "";
-        results += json.slip.advice;
+        results += "<strong>" + '"' + json.slip.advice + '"' + "</strong>";
         console.log(results);
         document.getElementById("free-advice").innerHTML = results;
       });
